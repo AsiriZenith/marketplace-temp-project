@@ -9,7 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
+
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -33,6 +35,7 @@ import { NewApplicationComponent } from './component/new-application/new-applica
     MatSliderModule,
     MatButtonModule,
     MatStepperModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],

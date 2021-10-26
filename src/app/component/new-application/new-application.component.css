@@ -26,3 +26,24 @@
       width: 90%;
   }
 
+  .checkbox-button-margin {
+    margin: 0 10px;
+  }
+
+  .text-padding {
+      padding: 20px;
+  }
+
+  .sm-font {
+    font-size: 12px;
+  }
+
+  .btn {
+    display:block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid red;
+    
+  }
+
