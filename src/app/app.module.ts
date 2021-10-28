@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
@@ -30,6 +31,7 @@ import { NewApplicationComponent } from './component/new-application/new-applica
     MatIconModule,
     MatCardModule,
     MatTabsModule,
+    MatChipsModule,
     MatInputModule,
     MatSelectModule,
     MatSliderModule,

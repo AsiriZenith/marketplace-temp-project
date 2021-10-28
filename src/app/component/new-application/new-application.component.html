@@ -7,7 +7,6 @@
             <mat-card>
                 <mat-stepper #stepper>
                     <mat-step label="Configuration">
-                        <div class="col">
                             <div class="row">
                                 <mat-form-field class="example-width" appearance="fill">
                                     <mat-label>App name*</mat-label>
@@ -49,10 +48,8 @@
                                     <button mat-raised-button>Cancel</button>
                                 </div>
                             </div>
-                        </div>
                     </mat-step>
-                    <mat-step label="API Key">
-                        <div class="col">
+                    <mat-step labelPosition="bottom" label="API Key">
                             <div class="row">
                                 <h3>Key and Secret</h3>
                                 <p>Sandbox Key and Secret is not generated for this application.</p>
@@ -81,6 +78,7 @@
                                     <mat-checkbox class="checkbox-button-margin">Client Credentials</mat-checkbox>
                                     <mat-checkbox class="checkbox-button-margin">IWA-NTML</mat-checkbox>
                                     <mat-checkbox class="checkbox-button-margin">Device Code</mat-checkbox>
+                                    <mat-checkbox class="checkbox-button-margin">Code</mat-checkbox>
                                     <mat-checkbox class="checkbox-button-margin">JWT</mat-checkbox>
                                 </section>
                             </div>
@@ -107,15 +105,14 @@
                                 <div class="col-1">
                                     <button mat-raised-button>Generate Key</button>
                                 </div>
-                                <div class="col-6"></div>
+                                <div class="col-7"></div>
                                 <div class="col-1">
                                     <button mat-raised-button rounded="true">Create</button>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-1">
                                     <button mat-raised-button>Cancel</button>
                                 </div>
                             </div>
-                        </div>
                     </mat-step>
                 </mat-stepper>
             </mat-card>
