@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { StudentDetails } from 'src/app/Model/student.details';
-import { StudentService } from 'src/app/service/student.service';
+
 import { EditComponent } from './edit-component/edit.component';
+
+import { StudentDetails } from 'src/app/Model/student.details';
+
+import { DataTransformationService } from 'src/app/service/datatransformation.service';
+import { StudentService } from 'src/app/service/student.service';
 
 @Component({
   selector: 'h2-compute',
@@ -20,6 +24,7 @@ export class H2ComputeComponent implements OnInit {
   ];
 
   constructor(
+    private dataTransformationService: DataTransformationService,
     private studentService: StudentService,
     public dialog: MatDialog
   ) {}
@@ -33,18 +38,29 @@ export class H2ComputeComponent implements OnInit {
     this.studentService.getApplicationData().subscribe((data) => {
       this.dataSource = data.list;
     });
+    this.dataTransformationService.setStudentData(this.dataSource);
   }
 
+  /** open dialog view to edit student details */
   openDialog(row: StudentDetails): void {
     const dialogRef = this.dialog.open(EditComponent, {
       width: '500px',
-      data: { firstname: row.firstname, lastname: row.lastname, dob: row.dob },
+      height: '400px',
+      data: row,
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-      row.dob = result;
+    dialogRef.afterClosed().subscribe((result: StudentDetails) => {
+      console.log(result);
+      // let editstudent: StudentDetails = this.dataSource.find((data) => {
+      //   data.code == result.code;
+      // });
+      // console.log(editstudent);
+      // let editstudentindex = this.dataSource.indexOf(editstudent[0]);
+      // this.dataSource[editstudentindex].firstname = result.firstname;
+      // this.dataSource[editstudentindex].lastname = result.lastname;
+      // this.dataSource[editstudentindex].dob = result.dob;
     });
+    this.dataTransformationService.setStudentData(this.dataSource);
   }
 
   /** delete row data (when clicking the delete action) */
