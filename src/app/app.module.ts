@@ -24,6 +24,9 @@ import { EditComponent } from './component/h2-compute-assignment/edit-component/
 import { NewApplicationComponent } from './component/new-application/new-application.component';
 
 import { StudentService } from './service/student.service';
+import { DataTransformationService } from './service/datatransformation.service';
+import { CreateStudentComponent } from './component/h2-compute-assignment/create-student.component/create-student.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { StudentService } from './service/student.service';
     EditComponent,
     ExampleComponent,
     H2ComputeComponent,
+    CreateStudentComponent,
     NewApplicationComponent,
   ],
   imports: [
@@ -48,11 +52,12 @@ import { StudentService } from './service/student.service';
     MatButtonModule,
     MatStepperModule,
     HttpClientModule,
+    AppRoutingModule,
     MatCheckboxModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [StudentService],
+  providers: [StudentService, DataTransformationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

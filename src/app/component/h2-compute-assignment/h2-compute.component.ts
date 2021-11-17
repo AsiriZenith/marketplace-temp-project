@@ -7,6 +7,7 @@ import { StudentDetails } from 'src/app/Model/student.details';
 
 import { DataTransformationService } from 'src/app/service/datatransformation.service';
 import { StudentService } from 'src/app/service/student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'h2-compute',
@@ -14,7 +15,7 @@ import { StudentService } from 'src/app/service/student.service';
   styleUrls: ['./h2-compute.component.css'],
 })
 export class H2ComputeComponent implements OnInit {
-  dataSource!: StudentDetails[];
+  dataSource: StudentDetails[] = [];
   displayedColumns: string[] = [
     'code',
     'firstname',
@@ -24,43 +25,40 @@ export class H2ComputeComponent implements OnInit {
   ];
 
   constructor(
+    private router: Router,
     private dataTransformationService: DataTransformationService,
     private studentService: StudentService,
     public dialog: MatDialog
-  ) {}
-
-  ngOnInit(): void {
+  ) {
+    this.dataTransformationService.dataSource.subscribe((data) => {
+      this.dataSource = data;
+    });
     this.getStudentDetails();
   }
 
+  ngOnInit(): void {}
+
   /** get all student details */
   getStudentDetails() {
-    this.studentService.getApplicationData().subscribe((data) => {
-      this.dataSource = data.list;
-    });
-    this.dataTransformationService.setStudentData(this.dataSource);
+    if (this.dataSource.length == 0) {
+      this.studentService.getApplicationData().subscribe((data) => {
+        this.dataSource = data.list;
+        this.dataTransformationService.setStudentData(this.dataSource);
+      });
+    }
   }
 
   /** open dialog view to edit student details */
   openDialog(row: StudentDetails): void {
-    const dialogRef = this.dialog.open(EditComponent, {
+    this.dialog.open(EditComponent, {
       width: '500px',
       height: '400px',
       data: row,
     });
+  }
 
-    dialogRef.afterClosed().subscribe((result: StudentDetails) => {
-      console.log(result);
-      // let editstudent: StudentDetails = this.dataSource.find((data) => {
-      //   data.code == result.code;
-      // });
-      // console.log(editstudent);
-      // let editstudentindex = this.dataSource.indexOf(editstudent[0]);
-      // this.dataSource[editstudentindex].firstname = result.firstname;
-      // this.dataSource[editstudentindex].lastname = result.lastname;
-      // this.dataSource[editstudentindex].dob = result.dob;
-    });
-    this.dataTransformationService.setStudentData(this.dataSource);
+  createNewStudent() {
+    this.router.navigate(['/newstudent']);
   }
 
   /** delete row data (when clicking the delete action) */

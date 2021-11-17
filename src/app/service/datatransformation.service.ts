@@ -8,9 +8,10 @@ import { StudentDetails } from '../Model/student.details';
 export class DataTransformationService {
   data: StudentDetails[] = [];
 
-  public studentDetailsSubject = new BehaviorSubject<StudentDetails[]>(
+  private studentDetailsSubject = new BehaviorSubject<StudentDetails[]>(
     this.data
   );
+  dataSource = this.studentDetailsSubject.asObservable();
 
   constructor() {}
 

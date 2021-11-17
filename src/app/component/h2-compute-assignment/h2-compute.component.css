@@ -30,3 +30,11 @@ table {
   padding: 15px;
   font-size: 15px;
 }
+
+.title-padding {
+  padding: 20px;
+}
+
+.btn-style {
+  height: 35px;
+}
