@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './component/example/example.component';
+import { StarRatingComponent } from './component/star-rating/star-rating.component';
 import { ImageUploadComponent } from './component/image-upload/image-upload.component';
 import { H2ComputeComponent } from './component/h2-compute-assignment/h2-compute.component';
 import { EditComponent } from './component/h2-compute-assignment/edit-component/edit.component';
@@ -35,13 +36,13 @@ import { StudentService } from './service/student.service';
 import { FileUploadService } from './service/file-upload.service';
 import { DataTransformationService } from './service/datatransformation.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     EditComponent,
     ExampleComponent,
     H2ComputeComponent,
+    StarRatingComponent,
     ImageUploadComponent,
     CreateStudentComponent,
     NewApplicationComponent,

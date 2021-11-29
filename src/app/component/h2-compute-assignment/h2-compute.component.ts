@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 import { EditComponent } from './edit-component/edit.component';
 
-import { StudentDetails } from 'src/app/Model/student.details';
+import { StudentDetails } from '../../Model/student.details';
 
-import { DataTransformationService } from 'src/app/service/datatransformation.service';
-import { StudentService } from 'src/app/service/student.service';
-import { Router } from '@angular/router';
+import { DataTransformationService } from '../../service/datatransformation.service';
+import { StudentService } from '../../service/student.service';
+
 
 @Component({
   selector: 'h2-compute',
