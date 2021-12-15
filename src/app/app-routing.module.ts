@@ -5,7 +5,7 @@ import { H2ComputeComponent } from './component/h2-compute-assignment/h2-compute
 import { ImageUploadComponent } from './component/image-upload/image-upload.component';
 
 const routes: Routes = [
-  { path: '', component: ImageUploadComponent },
+  { path: '', component: H2ComputeComponent },
   { path: 'newstudent', component: CreateStudentComponent },
   { path: 'viewstudent', component: H2ComputeComponent },
 ];
