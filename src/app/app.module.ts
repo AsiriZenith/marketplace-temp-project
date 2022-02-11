@@ -26,6 +26,7 @@ import { AppComponent } from './app.component';
 import { ExampleComponent } from './component/example/example.component';
 import { StarRatingComponent } from './component/star-rating/star-rating.component';
 import { ImageUploadComponent } from './component/image-upload/image-upload.component';
+import { VideoUploadComponent } from './component/video-upload/video.upload.component';
 import { H2ComputeComponent } from './component/h2-compute-assignment/h2-compute.component';
 import { EditComponent } from './component/h2-compute-assignment/edit-component/edit.component';
 import { NewApplicationComponent } from './component/new-application/new-application.component';
@@ -43,6 +44,7 @@ import { DataTransformationService } from './service/datatransformation.service'
     ExampleComponent,
     H2ComputeComponent,
     StarRatingComponent,
+    VideoUploadComponent,
     ImageUploadComponent,
     CreateStudentComponent,
     NewApplicationComponent,
