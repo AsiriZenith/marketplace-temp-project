@@ -1,0 +1,54 @@
+{
+  "apis": [
+    {
+      "category": [
+        "Category1",
+        "Category2",
+        "Category3"
+      ],
+      "collection": [
+        "Collection1",
+        "Collection2"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "category": [
+        "Category1",
+        "Category2",
+        "Category3"
+      ],
+      "collection": [
+        "Collection1",
+        "Collection2"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "category": [
+        "Category1",
+        "Category2",
+        "Category3"
+      ],
+      "collection": [
+        "Collection1",
+        "Collection2"
+      ]
+    }
+  ],
+  "consultancy_service": [
+    {
+      "category": [
+        "Category1",
+        "Category2",
+        "Category3"
+      ],
+      "collection": [
+        "Collection1",
+        "Collection2"
+      ]
+    }
+  ]
+}

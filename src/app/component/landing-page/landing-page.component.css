@@ -1,0 +1,65 @@
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.sub-asset-list-margin {
+  margin-left: 18px;
+}
+
+.example-card {
+  max-width: 350px;
+}
+/********************************************/
+input[type="radio"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: rgb(255, 255, 255);
+  height: 16px;
+  width: 16px;
+  border: 1px solid rgb(3, 3, 3);
+}
+
+input[type="radio"]:checked {
+  background: #ffffff;
+}
+
+input[type="checkbox"]:hover {
+  filter: brightness(90%);
+}
+
+input[type="checkbox"]:disabled {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+input[type="radio"]:after {
+  content: "";
+  position: relative;
+  left: 40%;
+  top: 20%;
+  width: 28%;
+  height: 55%;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+input[type="radio"]:checked:after {
+  display: block;
+}
+
+input[type="radio"]:disabled:after {
+  border-color: #7b7b7b;
+}

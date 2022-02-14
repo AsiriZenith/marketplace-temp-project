@@ -1,0 +1,42 @@
+{
+  "count": 5,
+  "list": [
+    {
+      "name": "Weather Man",
+      "isVerified": true,
+      "description": "Delivers patented phone-based verification and two-factor authentication using a time-based, one-time passcode",
+      "userRating": 120
+    },
+    {
+      "name": "Bulk SMS",
+      "isVerified": true,
+      "description": "Delivers patented phone-based verification and two-factor authentication using a time-based, one-time passcode",
+      "userRating": 120
+    },
+    {
+      "name": "OneAPI Location",
+      "isVerified": true,
+      "description": "Delivers patented phone-based verification and two-factor authentication using a time-based, one-time passcode",
+      "userRating": 120
+    },
+    {
+      "name": "OneAPI Payment",
+      "isVerified": true,
+      "description": "Delivers patented phone-based verification and two-factor authentication using a time-based, one-time passcode",
+      "userRating": 120
+    },
+    {
+      "name": "DND (do not disturb)",
+      "isVerified": true,
+      "description": "Delivers patented phone-based verification and two-factor authentication using a time-based, one-time passcode",
+      "userRating": 120
+    }
+  ],
+  "pagination": {
+    "offset": 5,
+    "limit": 25,
+    "total": 0,
+    "next": "",
+    "previous": ""
+  }
+}

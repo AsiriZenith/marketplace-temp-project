@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <form [formGroup]="assetslist">
+        <div class="row">
+          <p><b>Assets</b></p>
+          <section class="example-radio-group">
+            <mat-checkbox name="apis" formControlName="apis">APIs</mat-checkbox>
+            <section *ngIf="apis" class="example-radio-group sub-asset-list-margin">
+              <mat-checkbox *ngFor="let value of apiValues">{{value}}</mat-checkbox>
+            </section>
+            <mat-checkbox name="videos" formControlName="videos"> Videos </mat-checkbox>
+            <section *ngIf="videos" class="example-radio-group sub-asset-list-margin">
+              <mat-checkbox *ngFor="let value of videoValue">{{value}}</mat-checkbox>
+            </section>
+            <mat-checkbox name="documents" formControlName="documents"> Documents </mat-checkbox>
+            <section *ngIf="documents" class="example-radio-group sub-asset-list-margin">
+              <mat-checkbox *ngFor="let value of documentValue">{{value}}</mat-checkbox>
+            </section>
+            <mat-checkbox name="consultancy_service" formControlName="consultancy_service">
+              Consultancy Services </mat-checkbox>
+            <section *ngIf="consultancy_service" class="example-radio-group sub-asset-list-margin">
+              <mat-checkbox *ngFor="let value of consultancyServiceValue">{{value}}</mat-checkbox>
+            </section>
+          </section>
+        </div>
+        <div class="row">
+          <p><b>Categories</b></p>
+          <div class="example-radio-group">
+            <label><input type="radio" name="radio" value="1"> Telecom (20)</label>
+            <label><input type="radio" name="radio" value="2"> Finance (104) </label>
+            <label><input type="radio" name="radio" value="3"> Life Science (87) </label>
+            <label><input type="radio" name="radio" value="4"> Retail (75) </label>
+            <label><input type="radio" name="radio" value="5"> Transportation (20) </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-9">
+      <mat-card class="example-card">
+        <mat-card-title>Weather Man </mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        <mat-card-content>
+          <p>This card indeterminates progress bar.</p>
+          <p>{{longText}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="material-icons inactive-rating">star</span>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

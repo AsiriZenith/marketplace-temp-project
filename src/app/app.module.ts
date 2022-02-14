@@ -8,6 +8,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -35,7 +36,9 @@ import { CreateStudentComponent } from './component/h2-compute-assignment/create
 
 import { StudentService } from './service/student.service';
 import { FileUploadService } from './service/file-upload.service';
+import { LandingPageService } from './service/landing-page.service';
 import { DataTransformationService } from './service/datatransformation.service';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -45,10 +48,11 @@ import { DataTransformationService } from './service/datatransformation.service'
     H2ComputeComponent,
     StarRatingComponent,
     VideoUploadComponent,
+    LandingPageComponent,
     ImageUploadComponent,
     CreateStudentComponent,
     NewApplicationComponent,
-    ImageUploadPart2Component
+    ImageUploadPart2Component,
   ],
   imports: [
     FormsModule,
@@ -57,6 +61,7 @@ import { DataTransformationService } from './service/datatransformation.service'
     MatListModule,
     MatCardModule,
     MatTabsModule,
+    MatRadioModule,
     MatTableModule,
     MatChipsModule,
     MatInputModule,
@@ -74,7 +79,12 @@ import { DataTransformationService } from './service/datatransformation.service'
     MatProgressBarModule,
     BrowserAnimationsModule,
   ],
-  providers: [StudentService, DataTransformationService, FileUploadService],
+  providers: [
+    StudentService,
+    FileUploadService,
+    LandingPageService,
+    DataTransformationService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
