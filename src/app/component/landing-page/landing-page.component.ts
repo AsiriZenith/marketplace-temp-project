@@ -95,3 +95,5 @@ export interface APiDetailResponse {
   count: number;
   list: APiDetail[];
 }
+
+// assets listing - component name
