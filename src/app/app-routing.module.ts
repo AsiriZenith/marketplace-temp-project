@@ -7,7 +7,8 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
 import { VideoUploadComponent } from './component/video-upload/video.upload.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: ImageUploadComponent },
+  { path: 'landingpage', component: LandingPageComponent },
   { path: 'image', component: ImageUploadComponent },
   { path: 'video', component: VideoUploadComponent },
   { path: 'viewstudent', component: H2ComputeComponent },
