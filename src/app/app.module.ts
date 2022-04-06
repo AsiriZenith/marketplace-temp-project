@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
@@ -27,8 +27,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './component/example/example.component';
 import { StarRatingComponent } from './component/star-rating/star-rating.component';
+import { FlexLayOutComponent } from './component/flexLayout/flexLayout.component';
 import { ImageUploadComponent } from './component/image-upload/image-upload.component';
 import { VideoUploadComponent } from './component/video-upload/video.upload.component';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 import { H2ComputeComponent } from './component/h2-compute-assignment/h2-compute.component';
 import { EditComponent } from './component/h2-compute-assignment/edit-component/edit.component';
 import { NewApplicationComponent } from './component/new-application/new-application.component';
@@ -39,14 +41,13 @@ import { StudentService } from './service/student.service';
 import { FileUploadService } from './service/file-upload.service';
 import { LandingPageService } from './service/landing-page.service';
 import { DataTransformationService } from './service/datatransformation.service';
-import { LandingPageComponent } from './component/landing-page/landing-page.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     EditComponent,
     ExampleComponent,
     H2ComputeComponent,
+    FlexLayOutComponent,
     StarRatingComponent,
     VideoUploadComponent,
     LandingPageComponent,

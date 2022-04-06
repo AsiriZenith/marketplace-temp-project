@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FlexLayOutComponent } from './component/flexLayout/flexLayout.component';
 import { CreateStudentComponent } from './component/h2-compute-assignment/create-student.component/create-student.component';
 import { H2ComputeComponent } from './component/h2-compute-assignment/h2-compute.component';
 import { ImageUploadComponent } from './component/image-upload/image-upload.component';
@@ -7,7 +8,7 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
 import { VideoUploadComponent } from './component/video-upload/video.upload.component';
 
 const routes: Routes = [
-  { path: '', component: ImageUploadComponent },
+  { path: '', component: FlexLayOutComponent },
   { path: 'landingpage', component: LandingPageComponent },
   { path: 'image', component: ImageUploadComponent },
   { path: 'video', component: VideoUploadComponent },

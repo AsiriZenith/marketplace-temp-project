@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item {
+  background-color: aqua;
+  padding: 2rem;
+  font-size: 1.5em;
+  border: 1px solid black;
+}
+
+.container {
+  height: 50vh;
+  background-color: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.three {
+  flex-grow: 1;
+}
+
+.two {
+  flex-basis: 60%;
+}
